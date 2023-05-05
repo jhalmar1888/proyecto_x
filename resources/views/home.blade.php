@@ -3,11 +3,7 @@
 @section('title', 'AdminLTE')
 
 @section('content_header')
-<<<<<<< HEAD
-    <h1 class="m-0 text-dark">Dashboard</h1>
-=======
     <h1 class="m-0 text-dark">Bienvenidos al Dashboard Principal</h1>
->>>>>>> 33d41039dcd80efddb2fdbfad6c56390524a1f5c
 @stop
 
 @section('content')
