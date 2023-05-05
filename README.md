@@ -53,6 +53,20 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
+## PASOS A  SEGUIR 
+
+[11:26, 5/5/2023] Jhalmar: npm install
+[11:28, 5/5/2023] Jhalmar: composer  require laravel/ui
+[11:29, 5/5/2023] Jhalmar: php artisan ui bootstrap --auth
+[11:29, 5/5/2023] Jhalmar: npm update
+[11:31, 5/5/2023] Jhalmar: migrar
+[11:31, 5/5/2023] Jhalmar: composer require jeroennoten/laravel-adminlte
+[11:33, 5/5/2023] Jhalmar: php artisan adminlte:install —type=full
+
+LINKS DE INSTALACIÓN
+[11:07, 5/5/2023] Jhalmar: https://github.com/jeroennoten/Laravel-AdminLTE
+[11:08, 5/5/2023] Jhalmar: https://laraveleando.dev/posts/integrar-una-plantilla-adminlte-en-laravel-9
+
 ## Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
