@@ -20,15 +20,27 @@
                             <div class="card card-primary">
                               <div class="card-header">
                                 <h3 class="card-title">Tipo Licencia</h3>
-                                <h2>
-                                    Editar Tipo Licencia
-                                    <a href="{{ route('TipoLicencia.index') }}" class="btn btn-primary pull-right">Listado</a>
-                            
                               </div>
-                             
-                                {{-- {!! Form::model($producto, ['route' => ['producto.update', $producto->id], 'method' => 'PUT']) !!}
-                                    @include('producto.partials.form')
-                                {!! Form::close() !!} --}}
+                              <form action="{{ route('TipoLicencia.update',$item->id) }}" method="POST">
+                                @csrf
+                                @method('PUT')
+                                <div class="card-body">
+                                  <div class="form-group">
+                                    <label for="Num">Num</label>
+                                    <input type="text" class="form-control" value="{{ $item->Num }}"  name="Num" placeholder="Numero">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="TipoLicencia">Tipo Licencia</label>
+                                    <input type="text" class="form-control" value="{{ $item->TipoLicencia }}" name="TipoLicencia" placeholder="Tipo de Licencia">
+                                  </div>
+                                </div>
+                
+                                <div class="card-footer">
+                                  <button class="btn btn-warning">Editar</button>
+                                  {{-- <button type="submit" class="btn btn-warning">Editar</button>
+                                  <button type="submit" class="btn btn-danger">Eliminar</button> --}}
+                                </div>
+                              </form>
                             </div>
                         </div>
                     </div> 

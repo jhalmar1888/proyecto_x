@@ -47,15 +47,15 @@ class TipoLicenciaController extends Controller
 
     public function update(TipoLicenciaRequest $request, $id)
     {
-        $producto = TipoLicencia::find($id);
+        //dd($request);
+        $item = TipoLicencia::find($id);
 
-        $producto->Nombre = $request->Nombre;
-        $producto->Nickname = $request->Nickname;
-        $producto->Resumen = $request->Resumen;
+        $item->Num = $request->Num;
+        $item->TipoLicencia = $request->TipoLicencia;
 
-        $producto->save();
-        return redirect()->route('producto.index')
-        ->with('info', 'El producto fue actualizado');
+        $item->save();
+        return redirect()->route('TipoLicencia.index')
+        ->with('info', 'Tipo Licencia fue actualizado');
     }
 
 
