@@ -383,6 +383,11 @@ return [
             'icon_color' => 'cyan',
             'url'        => '#',
         ],
+        [
+            'text'       => 'CRUD TipoLicencia',
+            'icon_color' => 'blue',
+            'url'        => 'TipoLicencia',
+        ],
     ],
 
     /*

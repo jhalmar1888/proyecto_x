@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TipoLicenciaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,16 @@ Auth::routes();
 Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
+
+
+/****************************************** TIPO LICENCIA *********************************/
+// Route::group(['prefix' => 'TipoLicencia'], function () {
+//     Route::get('/index', [TipoLicenciaController::class, 'index'])->name('TipoLicencia.index');
+//     Route::get('/show', [TipoLicenciaController::class, 'show'])->name('TipoLicencia.show');
+//     Route::get('/list', [TipoLicenciaController::class, 'list'])->name('TipoLicencia.list');
+//     Route::post('/store', [TipoLicenciaController::class, 'store'])->name('TipoLicencia.store');
+//     Route::delete('/destroy', [TipoLicenciaController::class, 'destroy'])->name('TipoLicencia.destroy');
+// });
+
+
+Route::resource('TipoLicencia', TipoLicenciaController::class);
