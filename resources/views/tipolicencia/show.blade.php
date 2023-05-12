@@ -28,13 +28,13 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
                                         <strong>Num:</strong>
-                                        {{ $item->Num }}
+                                        {{ $items->Num }}
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
                                         <strong>TipoLicencia:</strong>
-                                        {{ $item->TipoLicencia }}
+                                        {{ $items->TipoLicencia }}
                                     </div>
                                 </div>
                             </div>

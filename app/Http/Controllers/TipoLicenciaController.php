@@ -14,39 +14,56 @@ class TipoLicenciaController extends Controller
         return view('tipolicencia.index',compact('items'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
-    public function list(Request $request)
-    {
-        
-    }
-
-    public function show(TipoLicenciaRequest $item)
+    public function show($item)
     {
         //dd($item);
-        return view('tipolicencia.show',compact('item'));
+        $items = TipoLicencia::find($item);
+        return view('tipolicencia.show',compact('items'));
     }
+
+    public function create()
+    {
+        return view('tipolicencia.create');
+    }
+
 
     public function store(TipoLicenciaRequest $request)
     {
-        if ($request->id) {
-            $item = TipoLicencia::findOrFail($request->id);
-            $msg = trans('messages.updated');
-        } else {
-            $item = new TipoLicencia();
-            $msg = trans('messages.added');
-        }
-
+        //dd($request);
+        $item = new TipoLicencia;
         $item->Num = $request->Num;
         $item->TipoLicencia = $request->TipoLicencia;
-        $item->save();
 
-        
+        $item->save();
+        return redirect()->route('TipoLicencia.index')
+        ->with('info', 'Tipo Licencia fue guardado');
     }
 
-    public function destroy(Request $item)
+    public function edit($id)
     {
-        //$item = TipoLicencia::find($item);
-        $item->delete();
+        $item = TipoLicencia::find($id);
+        return view('tipolicencia.edit', compact('item'));
+    }
+
+    public function update(TipoLicenciaRequest $request, $id)
+    {
+        $producto = TipoLicencia::find($id);
+
+        $producto->Nombre = $request->Nombre;
+        $producto->Nickname = $request->Nickname;
+        $producto->Resumen = $request->Resumen;
+
+        $producto->save();
+        return redirect()->route('producto.index')
+        ->with('info', 'El producto fue actualizado');
+    }
+
+
+    public function destroy($item)
+    {
+        $items = TipoLicencia::find($item);
+        $items->delete();
   
-        return redirect()->route('tipolicencia.index')->with('success','Product deleted successfully');
+        return redirect()->route('TipoLicencia.index')->with('danger','Tipo Licencia fue Eliminado');
     }
 }
