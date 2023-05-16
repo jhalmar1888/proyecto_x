@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Archivo extends Model
 {
-   protected $table = 'archivo';
+    use HasFactory;
+   protected $table = 'Archivo';
 }

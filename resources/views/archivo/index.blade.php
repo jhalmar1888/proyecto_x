@@ -51,8 +51,34 @@
                         <th>URL</th>
                         <th width="280px">ACCIONES</th>
                     </tr>
+                    @foreach ($items as $item)
+                    <tr>
+                        <td>{{ ++$i }}</td>
+                        <td>{{ $item->Archivo }}</td>
+                        <td>{{ $item->TipoArchivo }}</td>
+                        <td>{{ $item->URL}}</td>
+                        <td>
+                            <form action="{{ route('archivo.destroy',$item->id) }}" method="POST">
+
+                                <a class="btn btn-info" href="{{ route('archivo.show',$item->id) }}">Ver</a>
+
+                                <a class="btn btn-primary" href="{{ route('archivo.edit',$item->id) }}">Editar</a>
+
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit" href="{{ route('archivo.destroy',$item->id) }}" class="btn btn-danger">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+                </table>
+
+                {!! $items->links() !!}
+
                 </div>
             </section>
         </div>
     </div>
 @stop
+
