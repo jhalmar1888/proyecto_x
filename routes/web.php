@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TipoLicenciaController;
-
+use App\Http\Controllers\ArchivoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,3 +40,7 @@ Route::get('/home', function() {
 
 
 Route::resource('TipoLicencia', TipoLicenciaController::class);
+
+
+//-------------RUTA DE ARCHIVO --------------//
+Route::resource('/archivo', ArchivoController::class);

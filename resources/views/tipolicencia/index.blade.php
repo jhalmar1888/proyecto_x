@@ -23,7 +23,7 @@
                         </div>
                     </div>
                 </div>
-               
+
                 @if ($message = Session::get('success'))
                     <div class="alert alert-success">
                         <p>{{ $message }}</p>
@@ -39,7 +39,7 @@
                         <p>{{ $message }}</p>
                     </div>
                 @endif
-               
+
                 <table class="table table-bordered">
                     <tr>
                         <th>No</th>
@@ -54,23 +54,23 @@
                         <td>{{ $item->TipoLicencia }}</td>
                         <td>
                             <form action="{{ route('TipoLicencia.destroy',$item->id) }}" method="POST">
-               
+
                                 <a class="btn btn-info" href="{{ route('TipoLicencia.show',$item->id) }}">Ver</a>
-                
+
                                 <a class="btn btn-primary" href="{{ route('TipoLicencia.edit',$item->id) }}">Editar</a>
-               
+
                                 @csrf
                                 @method('DELETE')
-                  
+
                                 <button type="submit" href="{{ route('TipoLicencia.destroy',$item->id) }}" class="btn btn-danger">Eliminar</button>
                             </form>
                         </td>
                     </tr>
                     @endforeach
                 </table>
-              
+
                 {!! $items->links() !!}
-                  
+
                 </div>
             </section>
         </div>

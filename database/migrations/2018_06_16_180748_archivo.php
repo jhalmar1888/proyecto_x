@@ -32,7 +32,7 @@ class Archivo extends Migration
             $table->string('DeleterIP', 250)->nullable();
 
             $table->foreign('TipoArchivo')->references('id')->on('TipoArchivo');
-            
+
         });
     }
 
