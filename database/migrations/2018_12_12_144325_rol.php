@@ -14,7 +14,7 @@ class Rol extends Migration
     public function up()
     {
         Schema::create('Rol', function (Blueprint $table) {
-            $table->increments('id');
+            $table->BigIncrements('id');
             $table->integer('Num')->unsigned()->nullable();
             $table->string('Rol', 250)->nullable();;
 

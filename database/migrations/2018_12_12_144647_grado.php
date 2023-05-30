@@ -14,7 +14,7 @@ class Grado extends Migration
     public function up()
     {
         Schema::create('Grado', function (Blueprint $table) {
-            $table->increments('id');
+            $table->BigIncrements('id');
             $table->integer('Num')->unsigned()->nullable();
             $table->string('Grado', 250)->nullable();;
 

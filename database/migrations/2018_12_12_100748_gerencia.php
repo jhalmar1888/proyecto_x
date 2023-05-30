@@ -9,7 +9,7 @@ class Gerencia extends Migration
     public function up()
     {
         Schema::create('Gerencia', function (Blueprint $table) {
-            $table->increments('id');
+            $table->BigIncrements('id');
             $table->integer('Num')->unsigned()->nullable();
             $table->string('Gerencia', 250)->nullable();
             $table->string('Sigla', 20)->nullable();

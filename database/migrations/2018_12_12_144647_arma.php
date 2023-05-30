@@ -14,7 +14,7 @@ class Arma extends Migration
     public function up()
     {
         Schema::create('Arma', function (Blueprint $table) {
-            $table->increments('id');
+            $table->BigIncrements('id');
             $table->integer('Num')->unsigned()->nullable();
             $table->string('Arma', 250)->nullable();;
 

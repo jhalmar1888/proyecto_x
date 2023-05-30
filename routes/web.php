@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TipoLicenciaController;
+use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\GradoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +42,5 @@ Route::get('/home', function() {
 
 
 Route::resource('TipoLicencia', TipoLicenciaController::class);
+Route::resource('Persona', PersonaController::class);
+Route::resource('Grado', GradoController::class);

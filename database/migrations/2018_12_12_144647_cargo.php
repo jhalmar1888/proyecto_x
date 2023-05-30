@@ -14,7 +14,7 @@ class Cargo extends Migration
     public function up()
     {
         Schema::create('Cargo', function (Blueprint $table) {
-            $table->increments('id');
+            $table->BigIncrements('id');
             $table->integer('Num')->unsigned()->nullable();
             $table->string('Cargo')->nullable();;
 

@@ -14,7 +14,7 @@ class Especialidad extends Migration
     public function up()
     {
         Schema::create('Especialidad', function (Blueprint $table) {
-            $table->increments('id');
+            $table->BigIncrements('id');
             $table->integer('Num')->unsigned()->nullable();
             $table->string('Especialidad')->nullable();;
 

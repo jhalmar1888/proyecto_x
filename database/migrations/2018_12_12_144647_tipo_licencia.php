@@ -14,7 +14,7 @@ class TipoLicencia extends Migration
     public function up()
     {
         Schema::create('TipoLicencia', function (Blueprint $table) {
-            $table->increments('id');
+            $table->BigIncrements('id');
             $table->integer('Num')->unsigned()->nullable();
             $table->string('TipoLicencia', 250)->nullable();;
 

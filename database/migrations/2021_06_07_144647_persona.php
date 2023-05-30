@@ -14,26 +14,26 @@ class Persona extends Migration
     public function up()
     {
         Schema::create('Persona', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('Gerencia')->unsigned()->nullable();
-            $table->integer('Rol')->unsigned()->nullable();
+            $table->BigIncrements('id');
+            $table->unsignedBigInteger('Gerencia')->unsigned()->nullable();
+            $table->unsignedBigInteger('Rol')->unsigned()->nullable();
             $table->string('ApellidoPaterno',50)->nullable();
             $table->string('ApellidoMaterno',50)->nullable();
             $table->string('Nombres',50);
-            $table->string('Persona',650);
-            $table->string('Fotografia',250)->nullable();
+            //$table->string('Persona',650);
+            //$table->string('Fotografia',250)->nullable();
             $table->integer('Ci')->nullable();
-            $table->integer('DepDocId')->nullable();
-            $table->integer('Grado')->nullable();
-            $table->integer('Arma')->nullable();
-            $table->integer('Especialidad')->nullable();
-            $table->integer('Cargo')->nullable();
-            $table->integer('TipoLicencia')->nullable();
+            $table->unsignedBigInteger('DepDocId')->nullable();
+            $table->unsignedBigInteger('Grado')->nullable();
+            $table->unsignedBigInteger('Arma')->nullable();
+            $table->unsignedBigInteger('Especialidad')->nullable();
+            $table->unsignedBigInteger('Cargo')->nullable();
+            $table->unsignedBigInteger('TipoLicencia')->nullable();
             $table->string('Profesion')->nullable();
             $table->integer('Celular')->nullable();
             $table->string('Sexo',10)->nullable();
-            $table->integer('Archivo')->nullable();
-            $table->integer('Reparticion')->nullable();
+            $table->unsignedBigInteger('Archivo')->nullable();
+            $table->unsignedBigInteger('Reparticion')->nullable();
            
             /* credenciales de acceso al sistema */
             $table->string('email')->unique()->nullable();
