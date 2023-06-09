@@ -390,9 +390,9 @@ return [
         ],
     
         [
-            'text'       => 'CRUD Grado',
+            'text'       => 'CRUD Persona',
             'icon_color' => 'red',
-            'url'        => 'Grado',
+            'url'        => 'Persona',
         ],
     ],
 
