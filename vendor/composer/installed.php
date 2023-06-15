@@ -982,7 +982,6 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../spatie/ignition',
             'aliases' => array(),
-            'reference' => 'f747d83c6d7cb6229b462f3ddbb3a82dc0db0f78',
             'dev_requirement' => true,
         ),
         'spatie/laravel-ignition' => array(
@@ -992,7 +991,6 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../spatie/laravel-ignition',
             'aliases' => array(),
-            'reference' => '802c7e27754456e45134f1a9d29ab7df4b6cb9e4',
             'dev_requirement' => true,
         ),
         'symfony/console' => array(

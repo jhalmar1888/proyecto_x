@@ -32,7 +32,6 @@ return array(
     'App\\Http\\Requests\\TipoLicenciaRequest' => $baseDir . '/app/Http/Requests/TipoLicenciaRequest.php',
     'App\\Http\\Requests\\ArchivoRequest' => $baseDir . '/app/Http/Requests/ArchivoRequest.php',
     'App\\Http\\Requests\\PruebaRequest' => $baseDir . '/app/Http/Requests/PruebaRequest.php',
-    'App\\Http\\Requests\\TipoLicenciaRequest' => $baseDir . '/app/Http/Requests/TipoLicenciaRequest.php',
     'App\\Models\\Archivo' => $baseDir . '/app/Models/Archivo.php',
     'App\\Models\\Prueba' => $baseDir . '/app/Models/Prueba.php',
     'App\\Models\\TipoLicencia' => $baseDir . '/app/Models/TipoLicencia.php',
