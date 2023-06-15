@@ -16,7 +16,7 @@ class Archivo extends Migration
         Schema::create('Archivo', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('Archivo')->nullable();
-            $table->integer('TipoArchivo')->nullable();
+            $table->unsignedBigInteger('TipoArchivo')->nullable();
             $table->string('URL')->nullable();
 
             $table->nullableTimestamps();

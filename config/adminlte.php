@@ -388,7 +388,15 @@ return [
             'icon_color' => 'blue',
             'url'        => 'TipoLicencia',
         ],
+        
+        
+        [
+            'text'       => 'CRUD Gerencia',
+            'icon_color' => 'blue',
+            'url'        => 'Gerencia',
+        ],
     ],
+    
 
     /*
     |--------------------------------------------------------------------------
