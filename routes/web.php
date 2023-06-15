@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TipoLicenciaController;
+use App\Http\Controllers\EspecialidadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,7 @@ Route::get('/home', function() {
 
 
 Route::resource('TipoLicencia', TipoLicenciaController::class);
+
+Route::resource('Especialidad', EspecialidadController::class);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
