@@ -65,7 +65,7 @@ class Persona extends Migration
             $table->string('DeleterFullUserName', 250)->nullable();
             $table->string('DeleterIP', 250)->nullable();
 
-            $table->foreign('Gerencia')->references('id')->on('Gerencia');//mamani lizet
+           /* $table->foreign('Gerencia')->references('id')->on('Gerencia');//mamani lizet
             $table->foreign('Rol')->references('id')->on('Rol');//ergueta luis
             $table->foreign('Archivo')->references('id')->on('Archivo');//machaca araceli
             $table->foreign('Reparticion')->references('id')->on('Reparticion');// calcina harol
@@ -74,7 +74,7 @@ class Persona extends Migration
             $table->foreign('Cargo')->references('id')->on('Cargo');//chura
             $table->foreign('Especialidad')->references('id')->on('Especialidad');//gutierrez
             $table->foreign('Grado')->references('id')->on('Grado');//leon rudy 
-            $table->foreign('TipoLicencia')->references('id')->on('TipoLicencia');
+            $table->foreign('TipoLicencia')->references('id')->on('TipoLicencia');*/
 
         });
     }

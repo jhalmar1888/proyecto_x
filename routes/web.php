@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TipoLicenciaController;
 
+use App\Http\Controllers\CargoController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,3 +42,4 @@ Route::get('/home', function() {
 
 
 Route::resource('TipoLicencia', TipoLicenciaController::class);
+Route::resource('Cargo', CargoController::class);

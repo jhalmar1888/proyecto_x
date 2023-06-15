@@ -31,7 +31,7 @@ class Archivo extends Migration
             $table->string('DeleterFullUserName', 250)->nullable();
             $table->string('DeleterIP', 250)->nullable();
 
-            $table->foreign('TipoArchivo')->references('id')->on('TipoArchivo');
+           /* $table->foreign('TipoArchivo')->references('id')->on('TipoArchivo');*/
             
         });
     }

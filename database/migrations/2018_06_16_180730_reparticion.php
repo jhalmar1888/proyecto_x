@@ -39,10 +39,9 @@ class Reparticion extends Migration
             $table->string('DeleterFullUserName', 250)->nullable();
             $table->string('DeleterIP', 250)->nullable();
 
-            $table->foreign('TipoReparticion')->references('id')->on('TipoReparticion');
+            /*$table->foreign('TipoReparticion')->references('id')->on('TipoReparticion');
             $table->foreign('UnidadSup')->references('id')->on('Reparticion');
-            $table->foreign('UnidadSupParte')->references('id')->on('Reparticion');
-           
+            $table->foreign('UnidadSupParte')->references('id')->on('Reparticion');*/           
             
         });
     }
