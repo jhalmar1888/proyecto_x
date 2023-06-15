@@ -3,7 +3,7 @@
 @section('title', 'AdminLTE')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Especialidad</h1>
+    <h1 class="m-0 text-dark">GERENCIA</h1>
 @stop
 
 @section('content')
@@ -11,7 +11,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <p class="mb-0">ESPECIALIDAD</p>
+                    <p class="mb-0">GERENCIA</p>
                 </div>
             </div>
             <section class="content">
@@ -19,19 +19,30 @@
                         <div class="col-md-6">
                             <div class="card card-primary">
                               <div class="card-header">
-                                <h3 class="card-title">ESPECIALIDAD</h3>
+                                <h3 class="card-title">Gerencia</h3>
                               </div>
-                              <form action="{{ route('Especialidad.store') }}" method="POST">
+                              <form action="{{ route('Gerencia.store') }}" method="POST">
                                 @csrf
                                 <div class="card-body">
                                   <div class="form-group">
                                     <label for="Num">Num</label>
-                                    <label for="Num">Número</label>
                                     <input type="text" class="form-control" name="Num" placeholder="Numero">
                                   </div>
                                   <div class="form-group">
-                                    <label for="Especialidad">Especialidad</label>
-                                    <input type="text" class="form-control" name="Especialidad" placeholder="Especialidad">
+                                    <label for="Gerencia">Gerencia</label>
+                                    <input type="text" class="form-control" name="Gerencia" placeholder="Gerencia">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="Sigla">Sigla</label>
+                                    <input type="text" class="form-control" name="Sigla" placeholder="Sigla">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="Alias">Alias</label>
+                                    <input type="text" class="form-control" name="Alias" placeholder="Alias">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="idSaga">idSaga</label>
+                                    <input type="text" class="form-control" name="idSaga" placeholder="idSaga">
                                   </div>
                                 </div>
                 

@@ -3,7 +3,7 @@
 @section('title', 'AdminLTE')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Especialidad</h1>
+    <h1 class="m-0 text-dark">ROL</h1>
 @stop
 
 @section('content')
@@ -11,7 +11,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <p class="mb-0">Especialidad</p>
+                    <p class="mb-0">ROL</p>
                 </div>
             </div>
             <section class="content">
@@ -19,7 +19,7 @@
                   <div class="row">
                     <div class="col-lg-12 margin-tb">
                         <div class="pull-right">
-                            <a class="btn btn-success" href="{{ route('Especialidad.create') }}"> Crear Nuevo</a>
+                            <a class="btn btn-success" href="{{ route('Rol.create') }}"> Crear Nuevo</a>
                         </div>
                     </div>
                 </div>
@@ -44,27 +44,25 @@
                     <tr>
                         <th>No</th>
                         <th>Num</th>
-                        <th>Nro</th>
-                        <th>Número</th>
-                        <th>Especialidad</th>
+                        <th>Rol</th>
                         <th width="280px">Acción</th>
                     </tr>
                     @foreach ($items as $item)
                     <tr>
                         <td>{{ ++$i }}</td>
                         <td>{{ $item->Num }}</td>
-                        <td>{{ $item->Especialidad }}</td>
+                        <td>{{ $item->Rol }}</td>
                         <td>
-                            <form action="{{ route('Especialidad.destroy',$item->id) }}" method="POST">
+                            <form action="{{ route('Rol.destroy',$item->id) }}" method="POST">
                
-                                <a class="btn btn-info" href="{{ route('Especialidad.show',$item->id) }}">Ver</a>
+                                <a class="btn btn-info" href="{{ route('Rol.show',$item->id) }}">Ver</a>
                 
-                                <a class="btn btn-primary" href="{{ route('Especialidad.edit',$item->id) }}">Editar</a>
+                                <a class="btn btn-primary" href="{{ route('Rol.edit',$item->id) }}">Editar</a>
                
                                 @csrf
                                 @method('DELETE')
                   
-                                <button type="submit" href="{{ route('Especialidad.destroy',$item->id) }}" class="btn btn-danger">Eliminar</button>
+                                <button type="submit" href="{{ route('Rol.destroy',$item->id) }}" class="btn btn-danger">Eliminar</button>
                             </form>
                         </td>
                     </tr>
