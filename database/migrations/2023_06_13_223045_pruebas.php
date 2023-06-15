@@ -1,22 +1,20 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class Sexo extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('Sexo', function (Blueprint $table) {
+        Schema::create('Prueba', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('Num')->unsigned()->nullable();
-            $table->string('Sexo', 250)->nullable();
+            $table->string('Prueba', 250)->nullable();
 
             $table->nullableTimestamps();
             $table->SoftDeletes();
@@ -34,11 +32,9 @@ class Sexo extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists('Sexo');
+        Schema::dropIfExists('Prueba');
     }
-}
+};

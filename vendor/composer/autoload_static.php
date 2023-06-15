@@ -530,6 +530,7 @@ class ComposerStaticInitf84820a8b28971d98ac3be4fde59411c
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\ArchivoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ArchivoController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -538,6 +539,10 @@ class ComposerStaticInitf84820a8b28971d98ac3be4fde59411c
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+<<<<<<< HEAD
+=======
+        'App\\Http\\Controllers\\PruebaController' => __DIR__ . '/../..' . '/app/Http/Controllers/PruebaController.php',
+>>>>>>> c4220f3215b50c49e9f119da8011c9295a7a389f
         'App\\Http\\Controllers\\TipoLicenciaController' => __DIR__ . '/../..' . '/app/Http/Controllers/TipoLicenciaController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -549,7 +554,15 @@ class ComposerStaticInitf84820a8b28971d98ac3be4fde59411c
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+<<<<<<< HEAD
         'App\\Http\\Requests\\TipoLicenciaRequest' => __DIR__ . '/../..' . '/app/Http/Requests/TipoLicenciaRequest.php',
+=======
+        'App\\Http\\Requests\\ArchivoRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ArchivoRequest.php',
+        'App\\Http\\Requests\\PruebaRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PruebaRequest.php',
+        'App\\Http\\Requests\\TipoLicenciaRequest' => __DIR__ . '/../..' . '/app/Http/Requests/TipoLicenciaRequest.php',
+        'App\\Models\\Archivo' => __DIR__ . '/../..' . '/app/Models/Archivo.php',
+        'App\\Models\\Prueba' => __DIR__ . '/../..' . '/app/Models/Prueba.php',
+>>>>>>> c4220f3215b50c49e9f119da8011c9295a7a389f
         'App\\Models\\TipoLicencia' => __DIR__ . '/../..' . '/app/Models/TipoLicencia.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

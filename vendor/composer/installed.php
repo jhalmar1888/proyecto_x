@@ -2,10 +2,10 @@
     'root' => array(
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
+        'reference' => '41aaecfe233f2002b97ebf294f21be49966795aa',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'f516f579974429627414d7cd58c76ee0893a0983',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -391,6 +391,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
+            'reference' => '41aaecfe233f2002b97ebf294f21be49966795aa',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -418,10 +419,10 @@
         'laravel/sanctum' => array(
             'pretty_version' => 'v3.2.5',
             'version' => '3.2.5.0',
+            'reference' => '8ebda85d59d3c414863a7f4d816ef8302faad876',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laravel/sanctum',
             'aliases' => array(),
-            'reference' => '8ebda85d59d3c414863a7f4d816ef8302faad876',
             'dev_requirement' => false,
         ),
         'laravel/serializable-closure' => array(
@@ -472,10 +473,10 @@
         'league/flysystem' => array(
             'pretty_version' => '3.15.1',
             'version' => '3.15.1.0',
+            'reference' => 'a141d430414fcb8bf797a18716b09f759a385bed',
             'type' => 'library',
             'install_path' => __DIR__ . '/../league/flysystem',
             'aliases' => array(),
-            'reference' => 'a141d430414fcb8bf797a18716b09f759a385bed',
             'dev_requirement' => false,
         ),
         'league/flysystem-local' => array(
@@ -485,6 +486,15 @@
             'install_path' => __DIR__ . '/../league/flysystem-local',
             'aliases' => array(),
             'reference' => '543f64c397fefdf9cfeac443ffb6beff602796b3',
+            'dev_requirement' => false,
+        ),
+        'league/flysystem-local' => array(
+            'pretty_version' => '3.15.0',
+            'version' => '3.15.0.0',
+            'reference' => '543f64c397fefdf9cfeac443ffb6beff602796b3',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../league/flysystem-local',
+            'aliases' => array(),
             'dev_requirement' => false,
         ),
         'league/mime-type-detection' => array(
@@ -860,10 +870,10 @@
         'sebastian/diff' => array(
             'pretty_version' => '5.0.3',
             'version' => '5.0.3.0',
+            'reference' => '912dc2fbe3e3c1e7873313cc801b100b6c68c87b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../sebastian/diff',
             'aliases' => array(),
-            'reference' => '912dc2fbe3e3c1e7873313cc801b100b6c68c87b',
             'dev_requirement' => true,
         ),
         'sebastian/environment' => array(
@@ -968,6 +978,7 @@
         'spatie/ignition' => array(
             'pretty_version' => '1.7.0',
             'version' => '1.7.0.0',
+            'reference' => 'f747d83c6d7cb6229b462f3ddbb3a82dc0db0f78',
             'type' => 'library',
             'install_path' => __DIR__ . '/../spatie/ignition',
             'aliases' => array(),
@@ -977,6 +988,7 @@
         'spatie/laravel-ignition' => array(
             'pretty_version' => '2.1.1',
             'version' => '2.1.1.0',
+            'reference' => '802c7e27754456e45134f1a9d29ab7df4b6cb9e4',
             'type' => 'library',
             'install_path' => __DIR__ . '/../spatie/laravel-ignition',
             'aliases' => array(),
