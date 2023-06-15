@@ -44,6 +44,8 @@
                     <tr>
                         <th>No</th>
                         <th>Num</th>
+                        <th>Nro</th>
+                        <th>Número</th>
                         <th>Especialidad</th>
                         <th width="280px">Acción</th>
                     </tr>

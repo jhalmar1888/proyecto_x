@@ -7,6 +7,9 @@ use App\Http\Controllers\CargoController;
 use App\Http\Controllers\EspecialidadController;
 use App\Http\Controllers\GradoController;
 use App\Http\Controllers\GerenciaController;
+
+
+use App\Http\Controllers\ArchivoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +29,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
 Route::get('/home', function() {
     return view('home');
@@ -50,4 +52,11 @@ Route::resource('Especialidad', EspecialidadController::class);
 Route::resource('Grado', GradoController::class);
 Route::resource('Cargo', CargoController::class);
 Route::resource('Gerencia', GerenciaController::class);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//-------------RUTA DE ARCHIVO --------------//
+Route::resource('/archivo', ArchivoController::class);
+
 

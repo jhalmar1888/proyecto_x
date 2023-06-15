@@ -1,17 +1,20 @@
 @extends('adminlte::page')
 
-@section('title', 'AdminLTE')
+
+@section('title','Archivo')
+
 
 @section('content_header')
-    <h1 class="m-0 text-dark">TIPO LICENCIA</h1>
+    <h1 class="m-0 text-dark">Archivo</h1>
 @stop
+
 
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <p class="mb-0">TIPO LICENCIA</p>
+                    <p class="mb-0">Archivos</p>
                 </div>
             </div>
             <section class="content">
@@ -19,7 +22,7 @@
                   <div class="row">
                     <div class="col-lg-12 margin-tb">
                         <div class="pull-right">
-                            <a class="btn btn-success" href="{{ route('TipoLicencia.create') }}"> Crear Nuevo</a>
+                        <a href="{{url('archivo/create')}}" class="btn btn-primary btn-sm" >Nuevo Archivo</a>
                         </div>
                     </div>
                 </div>
@@ -42,27 +45,29 @@
 
                 <table class="table table-bordered">
                     <tr>
-                        <th>No</th>
-                        <th>Num</th>
-                        <th>Tipo Licencia</th>
-                        <th width="280px">Acción</th>
+                        <th>Nro</th>
+                        <th>ARCHIVO</th>
+                        <th>TIPO ARCHIVO</th>
+                        <th>URL</th>
+                        <th width="280px">ACCIONES</th>
                     </tr>
                     @foreach ($items as $item)
                     <tr>
                         <td>{{ ++$i }}</td>
-                        <td>{{ $item->Num }}</td>
-                        <td>{{ $item->TipoLicencia }}</td>
+                        <td>{{ $item->Archivo }}</td>
+                        <td>{{ $item->TipoArchivo }}</td>
+                        <td>{{ $item->URL}}</td>
                         <td>
-                            <form action="{{ route('TipoLicencia.destroy',$item->id) }}" method="POST">
+                            <form action="{{ route('archivo.destroy',$item->id) }}" method="POST">
 
-                                <a class="btn btn-info" href="{{ route('TipoLicencia.show',$item->id) }}">Ver</a>
+                                <a class="btn btn-info" href="{{ route('archivo.show',$item->id) }}">Ver</a>
 
-                                <a class="btn btn-primary" href="{{ route('TipoLicencia.edit',$item->id) }}">Editar</a>
+                                <a class="btn btn-primary" href="{{ route('archivo.edit',$item->id) }}">Editar</a>
 
                                 @csrf
                                 @method('DELETE')
 
-                                <button type="submit" href="{{ route('TipoLicencia.destroy',$item->id) }}" class="btn btn-danger">Eliminar</button>
+                                <button type="submit" href="{{ route('archivo.destroy',$item->id) }}" class="btn btn-danger">Eliminar</button>
                             </form>
                         </td>
                     </tr>
@@ -76,3 +81,4 @@
         </div>
     </div>
 @stop
+

@@ -26,7 +26,11 @@
                                 @method('PUT')
                                 <div class="card-body">
                                   <div class="form-group">
+<<<<<<< HEAD
                                     <label for="Num">Num</label>
+=======
+                                    <label for="Num">Número</label>
+>>>>>>> d872680ebae5e73c98b4c5f538e64fde45197d38
                                     <input type="text" class="form-control" value="{{ $item->Num }}"  name="Num" placeholder="Numero">
                                   </div>
                                   <div class="form-group">
