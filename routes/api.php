@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PruebaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+/************************************ Prueba *****************/
+Route::group(['prefix' => 'Prueba'], function () {
+    Route::get('/list', [PruebaController::class, 'list'])->name('Prueba.list');
+    Route::get('/index', [PruebaController::class, 'index'])->name('Prueba.index');
+    Route::post('/destroy', [PruebaController::class, 'destroy'])->name('Prueba.destroy');
+    Route::post('/store', [PruebaController::class, 'store'])->name('Prueba.store');
+    Route::get('/show', [PruebaController::class, 'show'])->name('Prueba.show');
 });

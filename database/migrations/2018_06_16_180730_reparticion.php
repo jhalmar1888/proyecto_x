@@ -23,9 +23,9 @@ class Reparticion extends Migration
             $table->integer('Lugar')->nullable();
             $table->double('Latitud')->nullable();
             $table->double('Longitud')->nullable();
-            $table->integer('TipoReparticion')->nullable();
-            $table->integer('UnidadSup')->nullable();
-            $table->integer('UnidadSupParte')->nullable();
+            $table->unsignedBigInteger('TipoReparticion')->nullable();
+            $table->unsignedBigInteger('UnidadSup')->nullable();
+            $table->unsignedBigInteger('UnidadSupParte')->nullable();
 
             $table->nullableTimestamps();
             $table->SoftDeletes();
@@ -38,10 +38,19 @@ class Reparticion extends Migration
             $table->string('DeleterUserName', 250)->nullable();
             $table->string('DeleterFullUserName', 250)->nullable();
             $table->string('DeleterIP', 250)->nullable();
+<<<<<<< HEAD
 
             /*$table->foreign('TipoReparticion')->references('id')->on('TipoReparticion');
             $table->foreign('UnidadSup')->references('id')->on('Reparticion');
             $table->foreign('UnidadSupParte')->references('id')->on('Reparticion');*/           
+=======
+/*
+            $table->foreign('TipoReparticion')->references('id')->on('TipoReparticion');
+            $table->foreign('UnidadSup')->references('id')->on('Reparticion');
+            $table->foreign('UnidadSupParte')->references('id')->on('Reparticion');
+   
+   */        
+>>>>>>> 6bd2a55e840188eac69e36043bc3648a8116cbb7
             
         });
     }

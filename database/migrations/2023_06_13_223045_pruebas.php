@@ -1,23 +1,20 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class Archivo extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('Archivo', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('Archivo')->nullable();
-            $table->unsignedBigInteger('TipoArchivo')->nullable();
-            $table->string('URL')->nullable();
+        Schema::create('Prueba', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('Num')->unsigned()->nullable();
+            $table->string('Prueba', 250)->nullable();
 
             $table->nullableTimestamps();
             $table->SoftDeletes();
@@ -30,25 +27,14 @@ class Archivo extends Migration
             $table->string('DeleterUserName', 250)->nullable();
             $table->string('DeleterFullUserName', 250)->nullable();
             $table->string('DeleterIP', 250)->nullable();
-<<<<<<< HEAD
-
-           /* $table->foreign('TipoArchivo')->references('id')->on('TipoArchivo');*/
-            
-=======
-/*
-            $table->foreign('TipoArchivo')->references('id')->on('TipoArchivo');
- */           
->>>>>>> 6bd2a55e840188eac69e36043bc3648a8116cbb7
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists('Archivo');
+        Schema::dropIfExists('Prueba');
     }
-}
+};

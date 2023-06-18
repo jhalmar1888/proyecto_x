@@ -16,7 +16,7 @@ class Sexo extends Migration
         Schema::create('Sexo', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('Num')->unsigned()->nullable();
-            $table->string('Sexo', 250)->nullable();;
+            $table->string('Sexo', 250)->nullable();
 
             $table->nullableTimestamps();
             $table->SoftDeletes();
