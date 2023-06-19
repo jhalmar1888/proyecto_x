@@ -8,23 +8,7 @@ use App\Http\Controllers\EspecialidadController;
 use App\Http\Controllers\GradoController;
 use App\Http\Controllers\GerenciaController;
 
-<<<<<<< HEAD
-use App\Http\Controllers\CargoController;
 
-=======
-
-use App\Http\Controllers\ArchivoController;
->>>>>>> 6bd2a55e840188eac69e36043bc3648a8116cbb7
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -51,9 +35,6 @@ Route::get('/home', function() {
 
 
 Route::resource('TipoLicencia', TipoLicenciaController::class);
-<<<<<<< HEAD
-Route::resource('Cargo', CargoController::class);
-=======
 
 Route::resource('Rol', RolController::class);
 Route::resource('Especialidad', EspecialidadController::class);
@@ -68,4 +49,3 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/archivo', ArchivoController::class);
 
 
->>>>>>> 6bd2a55e840188eac69e36043bc3648a8116cbb7

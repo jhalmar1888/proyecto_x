@@ -336,14 +336,6 @@ return [
             'icon_color' => 'blue',
             'url'        => 'TipoLicencia',
         ],
-<<<<<<< HEAD
-
-        [
-            'text'       => 'CRUD Cargo',
-            'icon_color' => 'blue',
-            'url'        => 'Cargo',
-        ],
-=======
         [
             'text'       => 'CRUD Especialidad',
             'icon_color' => 'blue',
@@ -360,7 +352,6 @@ return [
             'url'        => 'api/Prueba/index',
         ]
     
->>>>>>> 6bd2a55e840188eac69e36043bc3648a8116cbb7
     ],
     
 
