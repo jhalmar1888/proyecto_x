@@ -332,9 +332,15 @@ return [
         
         ['header' => 'labels'],     
         [
-            'text'       => 'CRUD TipoLicencia',
+            'text'       => 'CRUD TipoLicenciffa',
             'icon_color' => 'blue',
             'url'        => 'TipoLicencia',
+        ],
+
+        [
+            'text'       => 'CRUD Cargo',
+            'icon_color' => 'blue',
+            'url'        => 'Cargo',
         ],
         [
             'text'       => 'CRUD Especialidad',
@@ -350,6 +356,21 @@ return [
             'text'       => 'CRUD prueba',
             'icon_color' => 'red',
             'url'        => 'api/Prueba/index',
+        ],
+        [
+            'text'       => 'ROL',
+            'icon_color' => 'red',
+            'url'        => 'Rol',
+        ],
+        [
+            'text'       => 'GRADO',
+            'icon_color' => 'red',
+            'url'        => 'Grado',
+        ],
+        [
+            'text'       => 'Gerencia',
+            'icon_color' => 'red',
+            'url'        => 'Gerencia',
         ]
     
     ],
