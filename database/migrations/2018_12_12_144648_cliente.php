@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Persona extends Migration
+class Cliente extends Migration
 {
     /**
      * Run the migrations.
@@ -13,27 +13,21 @@ class Persona extends Migration
      */
     public function up()
     {
-        Schema::create('Persona', function (Blueprint $table) {
+        Schema::create('Cliente', function (Blueprint $table) {
             $table->BigIncrements('id');
-            $table->unsignedBigInteger('Gerencia')->unsigned()->nullable();
-            $table->unsignedBigInteger('Rol')->unsigned()->nullable();
+            $table->string('Cliente')->nullable();
+            $table->unsignedBigInteger('Vehiculo')->nullable();
+            $table->unsignedBigInteger('FormaPago')->nullable();
+            $table->unsignedBigInteger('Cotizacion')->nullable();
+
             $table->string('ApellidoPaterno',50)->nullable();
             $table->string('ApellidoMaterno',50)->nullable();
             $table->string('Nombres',50);
-            //$table->string('Persona',650);
-            //$table->string('Fotografia',250)->nullable();
             $table->integer('Ci')->nullable();
-            $table->unsignedBigInteger('DepDocId')->nullable();
-            $table->unsignedBigInteger('Grado')->nullable();
-            $table->unsignedBigInteger('Arma')->nullable();
-            $table->unsignedBigInteger('Especialidad')->nullable();
-            $table->unsignedBigInteger('Cargo')->nullable();
-            $table->unsignedBigInteger('TipoLicencia')->nullable();
-            $table->string('Profesion')->nullable();
+            $table->string('Direccion',50)->nullable();
             $table->integer('Celular')->nullable();
             $table->string('Sexo',10)->nullable();
-            $table->unsignedBigInteger('Archivo')->nullable();
-            $table->unsignedBigInteger('Reparticion')->nullable();
+            
            
             /* credenciales de acceso al sistema */
             $table->string('email')->unique()->nullable();
@@ -65,16 +59,10 @@ class Persona extends Migration
             $table->string('DeleterFullUserName', 250)->nullable();
             $table->string('DeleterIP', 250)->nullable();
 
-            $table->foreign('Gerencia')->references('id')->on('Gerencia');//mamani lizet
-            $table->foreign('Rol')->references('id')->on('Rol');//ergueta luis
-            $table->foreign('Archivo')->references('id')->on('Archivo');//machaca araceli
-            $table->foreign('Reparticion')->references('id')->on('Reparticion');// calcina harol
-            $table->foreign('DepDocId')->references('id')->on('DepDocId');//ticona javier
-            $table->foreign('Arma')->references('id')->on('Arma');// perez pablo
-            $table->foreign('Cargo')->references('id')->on('Cargo');//chura
-            $table->foreign('Especialidad')->references('id')->on('Especialidad');//gutierrez
-            $table->foreign('Grado')->references('id')->on('Grado');//leon rudy 
-            $table->foreign('TipoLicencia')->references('id')->on('TipoLicencia');
+            $table->foreign('Vehiculo')->references('id')->on('Vehiculo');
+            $table->foreign('FormaPago')->references('id')->on('FormaPago');
+            $table->foreign('Cotizacion')->references('id')->on('Cotizacion');
+           
 
         });
     }
@@ -86,6 +74,6 @@ class Persona extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Persona');
+        Schema::dropIfExists('Cliente');
     }
 }

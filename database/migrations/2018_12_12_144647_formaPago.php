@@ -4,17 +4,19 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Gerencia extends Migration
+class formaPago extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
-        Schema::create('Gerencia', function (Blueprint $table) {
+        Schema::create('formaPago', function (Blueprint $table) {
             $table->BigIncrements('id');
-            $table->integer('Num')->unsigned()->nullable();
-            $table->string('Gerencia', 250)->nullable();
-            $table->string('Sigla', 20)->nullable();
-            $table->string('Alias', 20)->nullable();
-            $table->integer('idSaga')->nullable();
+            $table->string('FormaPago')->nullable();
+            $table->string('TipoPago', 50)->nullable();;
 
             $table->nullableTimestamps();
             $table->SoftDeletes();
@@ -27,9 +29,7 @@ class Gerencia extends Migration
             $table->string('DeleterUserName', 250)->nullable();
             $table->string('DeleterFullUserName', 250)->nullable();
             $table->string('DeleterIP', 250)->nullable();
-
         });
-        //
     }
 
     /**
@@ -39,6 +39,6 @@ class Gerencia extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Gerencia'); //
+        Schema::dropIfExists('formaPago');
     }
 }

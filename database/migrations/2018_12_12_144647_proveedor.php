@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Sexo extends Migration
+class Proveedor extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class Sexo extends Migration
      */
     public function up()
     {
-        Schema::create('Sexo', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('Num')->unsigned()->nullable();
-            $table->string('Sexo', 250)->nullable();;
+        Schema::create('Proveedor', function (Blueprint $table) {
+            $table->BigIncrements('id');
+            $table->string('Proveedor')->nullable();
+            $table->string('Nombre',50)->nullable();
+            $table->string('Correo',50)->nullable();
+            $table->integer('Telefono')->nullable();
+            $table->string('Direccion')->nullable();
 
             $table->nullableTimestamps();
             $table->SoftDeletes();
@@ -39,6 +42,6 @@ class Sexo extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Sexo');
+        Schema::dropIfExists('Proveedor');
     }
 }

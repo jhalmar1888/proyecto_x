@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DepDocId extends Migration
+class Asesor extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,19 @@ class DepDocId extends Migration
      */
     public function up()
     {
-        Schema::create('DepDocId', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('Num')->unsigned()->nullable();
-            $table->string('DepDocId', 50)->nullable()->unique();
-            $table->string('DepDocIdDescripcion', 25)->nullable();
+        Schema::create('Asesor', function (Blueprint $table) {
+            $table->BigIncrements('id');
+            $table->string('Asesor')->nullable();
+            $table->string('ApellidoPaterno',50)->nullable();
+            $table->string('ApellidoMaterno',50)->nullable();
+            $table->string('Nombres',50);
+            $table->string('Cargo',50)->nullable();
+            $table->string('Turno',20)->nullable();
+            $table->integer('Comision')->nullable();
+            $table->integer('Ci')->nullable();
+            $table->string('Direccion')->nullable();
+            $table->integer('Celular')->nullable();
+            $table->string('Sexo',10)->nullable();
 
             $table->nullableTimestamps();
             $table->SoftDeletes();
@@ -40,6 +48,6 @@ class DepDocId extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('DepDocId');
+        Schema::dropIfExists('Asesor');
     }
 }

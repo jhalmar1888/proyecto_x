@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Grado extends Migration
+class Cotizacion extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class Grado extends Migration
      */
     public function up()
     {
-        Schema::create('Grado', function (Blueprint $table) {
+        Schema::create('Cotizacion', function (Blueprint $table) {
             $table->BigIncrements('id');
-            $table->integer('Num')->unsigned()->nullable();
-            $table->string('Grado', 250)->nullable();;
+            $table->string('Cotizacion')->nullable();
+            //$table->integer('')->unsigned()->nullable();
+            $table->string('Vehiculo', 250)->nullable();;
+            $table->integer('Plazo')->nullable();
+            $table->integer('Interes')->nullable();
 
             $table->nullableTimestamps();
             $table->SoftDeletes();
@@ -39,6 +42,6 @@ class Grado extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Grado');
+        Schema::dropIfExists('Cotizacion');
     }
 }

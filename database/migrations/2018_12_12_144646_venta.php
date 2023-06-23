@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Rol extends Migration
+class Venta extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class Rol extends Migration
      */
     public function up()
     {
-        Schema::create('Rol', function (Blueprint $table) {
+        Schema::create('Venta', function (Blueprint $table) {
             $table->BigIncrements('id');
-            $table->integer('Num')->unsigned()->nullable();
-            $table->string('Rol', 250)->nullable();;
+            $table->string('Venta')->nullable();
+            $table->integer('NumeroFactura')->nullable();
+            $table->integer('PrecioTotal')->nullable();
+            
 
             $table->nullableTimestamps();
             $table->SoftDeletes();
@@ -29,9 +31,7 @@ class Rol extends Migration
             $table->string('DeleterUserName', 250)->nullable();
             $table->string('DeleterFullUserName', 250)->nullable();
             $table->string('DeleterIP', 250)->nullable();
-
         });
-        //
     }
 
     /**
@@ -41,6 +41,6 @@ class Rol extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Rol'); //
+        Schema::dropIfExists('Venta');
     }
 }

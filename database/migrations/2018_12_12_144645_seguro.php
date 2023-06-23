@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Reparticion extends Migration
+class Seguro extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,10 @@ class Reparticion extends Migration
      */
     public function up()
     {
-        Schema::create('Reparticion', function (Blueprint $table) {
+        Schema::create('Seguro', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('Reparticion')->nullable();
-            $table->string('Codigo')->nullable();
-            $table->string('Responsable')->nullable();
-            $table->string('Descripcion')->nullable();
-            $table->integer('DepDocId')->nullable();
-            $table->integer('Lugar')->nullable();
-            $table->double('Latitud')->nullable();
-            $table->double('Longitud')->nullable();
-            $table->unsignedBigInteger('TipoReparticion')->nullable();
-            $table->unsignedBigInteger('UnidadSup')->nullable();
-            $table->unsignedBigInteger('UnidadSupParte')->nullable();
+            $table->string('Seguro')->nullable();
+            $table->string('TipoSeguro', 25)->nullable();
 
             $table->nullableTimestamps();
             $table->SoftDeletes();
@@ -38,12 +29,6 @@ class Reparticion extends Migration
             $table->string('DeleterUserName', 250)->nullable();
             $table->string('DeleterFullUserName', 250)->nullable();
             $table->string('DeleterIP', 250)->nullable();
-
-            $table->foreign('TipoReparticion')->references('id')->on('TipoReparticion');
-            $table->foreign('UnidadSup')->references('id')->on('Reparticion');
-            $table->foreign('UnidadSupParte')->references('id')->on('Reparticion');
-           
-            
         });
     }
 
@@ -54,6 +39,6 @@ class Reparticion extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Reparticion');
+        Schema::dropIfExists('Seguro');
     }
 }
