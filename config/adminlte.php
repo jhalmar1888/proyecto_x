@@ -332,10 +332,11 @@ return [
         
         ['header' => 'labels'],     
         [
-            'text'       => 'CRUD TipoLicenciffa',
+            'text'       => 'CRUD TipoLicencia',
             'icon_color' => 'blue',
             'url'        => 'TipoLicencia',
         ],
+<<<<<<< HEAD
 <<<<<<< HEAD
     
         [
@@ -350,6 +351,8 @@ return [
             'icon_color' => 'blue',
             'url'        => 'Cargo',
         ],
+=======
+>>>>>>> parent of be91583... arreglos
         [
             'text'       => 'CRUD Especialidad',
             'icon_color' => 'blue',
@@ -364,21 +367,6 @@ return [
             'text'       => 'CRUD prueba',
             'icon_color' => 'red',
             'url'        => 'api/Prueba/index',
-        ],
-        [
-            'text'       => 'ROL',
-            'icon_color' => 'red',
-            'url'        => 'Rol',
-        ],
-        [
-            'text'       => 'GRADO',
-            'icon_color' => 'red',
-            'url'        => 'Grado',
-        ],
-        [
-            'text'       => 'Gerencia',
-            'icon_color' => 'red',
-            'url'        => 'Gerencia',
         ]
     
 >>>>>>> be915838211c301f0db88dabb03da7dd95a9d3de
