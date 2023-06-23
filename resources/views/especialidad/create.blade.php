@@ -3,7 +3,7 @@
 @section('title', 'AdminLTE')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">TIPO LICENCIA</h1>
+    <h1 class="m-0 text-dark">Especialidad</h1>
 @stop
 
 @section('content')
@@ -11,7 +11,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <p class="mb-0">TIPO LICENCIA</p>
+                    <p class="mb-0">ESPECIALIDAD</p>
                 </div>
             </div>
             <section class="content">
@@ -19,21 +19,22 @@
                         <div class="col-md-6">
                             <div class="card card-primary">
                               <div class="card-header">
-                                <h3 class="card-title">Tipo Licencia</h3>
+                                <h3 class="card-title">ESPECIALIDAD</h3>
                               </div>
-                              <form action="{{ route('TipoLicencia.store') }}" method="POST">
+                              <form action="{{ route('Especialidad.store') }}" method="POST">
                                 @csrf
                                 <div class="card-body">
                                   <div class="form-group">
                                     <label for="Num">Num</label>
+                                    <label for="Num">Número</label>
                                     <input type="text" class="form-control" name="Num" placeholder="Numero">
                                   </div>
                                   <div class="form-group">
-                                    <label for="TipoLicencia">Tipo Licencia</label>
-                                    <input type="text" class="form-control" name="TipoLicencia" placeholder="Tipo de Licencia">
+                                    <label for="Especialidad">Especialidad</label>
+                                    <input type="text" class="form-control" name="Especialidad" placeholder="Especialidad">
                                   </div>
                                 </div>
-
+                
                                 <div class="card-footer">
                                   <button class="btn btn-primary">Agregar</button>
                                   {{-- <button type="submit" class="btn btn-warning">Editar</button>
@@ -42,7 +43,7 @@
                               </form>
                             </div>
                         </div>
-                    </div>
+                    </div> 
             </section>
         </div>
     </div>

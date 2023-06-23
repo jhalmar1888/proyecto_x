@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Venta extends Migration
+class Reparticion extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,19 @@ class Venta extends Migration
      */
     public function up()
     {
-<<<<<<< HEAD:database/migrations/2018_12_12_144646_venta.php
-        Schema::create('Venta', function (Blueprint $table) {
-            $table->BigIncrements('id');
-            $table->string('Venta')->nullable();
-            $table->integer('NumeroFactura')->nullable();
-            $table->integer('PrecioTotal')->nullable();
-            
-=======
-        Schema::create('Archivo', function (Blueprint $table) {
+        Schema::create('Reparticion', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('Archivo')->nullable();
-            $table->unsignedBigInteger('TipoArchivo')->nullable();
-            $table->string('URL')->nullable();
->>>>>>> be915838211c301f0db88dabb03da7dd95a9d3de:database/migrations/2018_06_16_180748_archivo.php
+            $table->string('Reparticion')->nullable();
+            $table->string('Codigo')->nullable();
+            $table->string('Responsable')->nullable();
+            $table->string('Descripcion')->nullable();
+            $table->integer('DepDocId')->nullable();
+            $table->integer('Lugar')->nullable();
+            $table->double('Latitud')->nullable();
+            $table->double('Longitud')->nullable();
+            $table->unsignedBigInteger('TipoReparticion')->nullable();
+            $table->unsignedBigInteger('UnidadSup')->nullable();
+            $table->unsignedBigInteger('UnidadSupParte')->nullable();
 
             $table->nullableTimestamps();
             $table->SoftDeletes();
@@ -39,12 +38,13 @@ class Venta extends Migration
             $table->string('DeleterUserName', 250)->nullable();
             $table->string('DeleterFullUserName', 250)->nullable();
             $table->string('DeleterIP', 250)->nullable();
-<<<<<<< HEAD:database/migrations/2018_12_12_144646_venta.php
-=======
-
-           /* $table->foreign('TipoArchivo')->references('id')->on('TipoArchivo');*/
+/*
+            $table->foreign('TipoReparticion')->references('id')->on('TipoReparticion');
+            $table->foreign('UnidadSup')->references('id')->on('Reparticion');
+            $table->foreign('UnidadSupParte')->references('id')->on('Reparticion');
+   
+   */        
             
->>>>>>> be915838211c301f0db88dabb03da7dd95a9d3de:database/migrations/2018_06_16_180748_archivo.php
         });
     }
 
@@ -55,6 +55,6 @@ class Venta extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Venta');
+        Schema::dropIfExists('Reparticion');
     }
 }

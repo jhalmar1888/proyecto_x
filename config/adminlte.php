@@ -329,72 +329,61 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
+        
+        ['header' => 'labels'],     
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'CRUD TipoLicencia',
+            'text'       => 'CRUD TipoLicenciffa',
             'icon_color' => 'blue',
             'url'        => 'TipoLicencia',
         ],
+<<<<<<< HEAD
     
         [
             'text'       => 'CRUD Persona',
             'icon_color' => 'red',
             'url'        => 'Persona',
         ],
+=======
+
+        [
+            'text'       => 'CRUD Cargo',
+            'icon_color' => 'blue',
+            'url'        => 'Cargo',
+        ],
+        [
+            'text'       => 'CRUD Especialidad',
+            'icon_color' => 'blue',
+            'url'        => 'Especialidad',
+        ],
+        [
+            'text'       => 'CRUD Archivo',
+            'icon_color' => 'red',
+            'url'        => 'archivo',
+        ],
+        [
+            'text'       => 'CRUD prueba',
+            'icon_color' => 'red',
+            'url'        => 'api/Prueba/index',
+        ],
+        [
+            'text'       => 'ROL',
+            'icon_color' => 'red',
+            'url'        => 'Rol',
+        ],
+        [
+            'text'       => 'GRADO',
+            'icon_color' => 'red',
+            'url'        => 'Grado',
+        ],
+        [
+            'text'       => 'Gerencia',
+            'icon_color' => 'red',
+            'url'        => 'Gerencia',
+        ]
+    
+>>>>>>> be915838211c301f0db88dabb03da7dd95a9d3de
     ],
+    
 
     /*
     |--------------------------------------------------------------------------

@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 use App\Models\Grado;
 use App\Http\Requests\GradoRequest;
+<<<<<<< HEAD
 use Illuminate\Http\Request
+=======
+use Illuminate\Http\Request;
+>>>>>>> be915838211c301f0db88dabb03da7dd95a9d3de
 class GradoController extends Controller
 {
     public function index()
